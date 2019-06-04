@@ -226,7 +226,7 @@ section.productos {
 @media(max-width: 900px) {
 
     .wrapper {
-        background: url(/img/BG.jpg) center no-repeat;
+        background: url(img/BG.jpg) center no-repeat;
         background-size: cover;
     }
 
