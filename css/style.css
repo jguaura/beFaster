@@ -1,0 +1,298 @@
+@import url('https://fonts.googleapis.com/css?family=Anton&display=swap');
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    font-size: 10px;
+    font-family: Helvetica;
+}
+
+.wrapper {
+    width: 100%;
+    height: 100vh;
+}
+
+.patron {
+    position: absolute;
+    left: 20%;
+    width: 60%;
+    height: 100vh;
+    background: url(/img/BG_Pattern.png) no-repeat center;
+    z-index: -1;
+    opacity: 0.4;
+}
+
+.nav {
+    width: 100%;
+    height: 8rem;
+    position: absolute;
+    z-index: 200;
+}
+
+.logo {
+    font-size: 2rem;
+    margin: .2rem 2rem;
+    line-height: 8rem;
+    position: absolute;
+}
+
+.menu {
+    position: absolute;
+    height: 8rem;
+    right: 12rem;
+}
+
+.menu ul {
+    list-style: none;
+}
+
+.menu ul li {
+    display: inline-block;
+    margin: 1.8rem 0;
+    padding: 0 30px;
+    font-size: 1.4rem;
+    cursor: pointer;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+    transform: scale(0);
+}
+
+.menu ul li a:hover {
+    border-bottom: #17aa03 solid 2px;
+    transition: 250ms;
+    transform: scale(1.2);
+}
+
+.cart {
+    position: fixed;
+    font-size: 1.8rem;
+    margin: .2rem 1rem;
+    line-height: 8rem;
+    right: 2rem;
+}
+
+.box1 {
+    position: absolute;
+    width: 6rem;
+    height: 6rem;
+    background: none;
+    border: 2px solid #17aa03;
+    top: 10%;
+    left: 15%;
+    z-index: -1;
+    transform: rotate(60deg);
+}
+
+.box2 {
+    position: absolute;
+    width: 12rem;
+    height: 12rem;
+    background: #17aa03;
+    /*border: 2px solid #17aa03e1; */
+    top: 60%;
+    left: 28%;
+    transform: rotate(-110deg);
+    z-index: -1;
+}
+
+.box3 {
+    position: absolute;
+    width: 8rem;
+    height: 8rem;
+    background: none;
+    border: solid 2px #17aa03;
+    top: 34%;
+    left: 78%;
+    transform: rotate(30deg);
+}
+
+.runner img {
+    width: 100%;
+    z-index: 2;
+    margin-top: -2rem;
+}
+
+.titulo2 {
+    font-family: 'Anton';
+    font-size: 9rem;
+    font-style: italic;
+    text-transform: uppercase;
+    color: rgba(0, 0, 0, 0);
+    -webkit-text-stroke: 2px #17aa03;
+    z-index: -1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+}
+
+.titulo1 {
+    font-family: 'Anton';
+    font-size: 9rem;
+    font-style: italic;
+    text-transform: uppercase;
+    color: #17aa03;
+    z-index: -1;
+    position: absolute;
+    top: 30%;
+    left: 30%;
+    opacity: 0;
+}
+
+.contenido {
+    position: absolute;
+    top: 64%;
+    left: 57%;
+    width: 36%;
+    color: grey;
+    font-weight: lighter;
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+}
+
+button {
+    margin-top: .6rem;
+    background: #17aa03;
+    color: #ffffff;
+    padding: 2rem 3rem;
+    text-transform: uppercase;
+    letter-spacing: .3rem;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+}
+
+
+.media {
+    position: absolute;
+    bottom: 21rem;
+}
+
+.media ul {
+    position: absolute;
+    list-style: none;
+    z-index: 1;
+}
+
+.media ul li {
+    padding: 1rem 0;
+    font-size: 1.5rem;
+}
+
+.media ul li a {
+    color: gray;
+    transition: all 200ms;
+    transform: scale(1);
+
+}
+
+.media ul li:hover a {
+    transition: all 200ms;
+    transform: scale(2);
+    z-index: 200;
+
+}
+
+section.productos {
+    width: 100%;
+    height: 100vh;
+}
+
+.productos .grilla {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    overflow: hidden;
+}
+
+.productos .grilla img.am270,
+.productos .grilla img.huarache,
+.productos .grilla img.am97 {
+    width: 30%;
+    justify-self: center;
+    height: auto;
+
+}
+
+.productos .grilla img.am270 {}
+
+@media(max-width: 900px) {
+
+    .wrapper {
+        background: url(/img/BG.jpg) center no-repeat;
+        background-size: cover;
+    }
+
+    .patron {
+        display: none;
+    }
+
+    .runner img {
+        display: none;
+    }
+
+    .titulo1,
+    .titulo2 {
+        font-size: 5rem;
+    }
+
+    .titulo1 {
+        left: 20%;
+        top: 40%;
+    }
+
+    .titulo2 {
+        left: 50%;
+        z-index: 1;
+    }
+
+    .contenido p {
+        display: none;
+    }
+
+    .contenido button {
+        position: fixed;
+        right: 3rem;
+        bottom: 4rem;
+        z-index: 1;
+    }
+
+    .box2 {
+        top: 70%;
+    }
+
+    .menu {
+        display: none;
+    }
+
+
+}
+
+@media (max-width: 600px) {
+    .titulo2 {
+        position: absolute;
+        top: 44%;
+        left: 42%;
+    }
+
+    .titulo1 {
+        opacity: 0;
+        position: absolute;
+        left: 2rem;
+        top: 22rem;
+        z-index: 200;
+    }
+
+    .contenido button {
+        position: relative;
+        left: 2rem;
+        bottom: 1rem;
+    }
+}
